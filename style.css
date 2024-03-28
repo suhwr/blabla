@@ -1,0 +1,238 @@
+body {
+  text-decoration-color: #000;
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: absolute;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: var(--primary-color-light);
+    background-color: var(--primary-color-dark);
+}
+
+header {
+    background-color: #202020;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.home-button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.home-button img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+#infoContainer {
+  margin-top: 60px;
+}
+
+.right-section {
+  display: absolute;
+  background-color: #000;
+}
+
+#theme-options {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    top: 70px;
+    right: 0;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    outline: 2px solid #111;
+    z-index: 2;
+    transition: transform 0.3s;
+    transform: translateX(100%);
+}
+
+#theme-options.show {
+    display: flex;
+    flex-direction: row;
+    transform: translateX(0%);
+}
+
+.theme-option.selected {
+    border: 2px solid #007bff;
+}
+
+.theme-option {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+    transform: scale(1.2);
+}
+
+.theme-light {
+    background-color: #303030;
+    color: #fff;
+}
+
+.theme-cyan {
+    background-color: #00FFFF;
+    color: #fff;
+}
+
+.theme-macaron {
+    background-color: #E2FFC6;
+    color: #fff;
+}
+
+.theme-dark {
+    background-color: #FFFFFF;
+    color: #303030;
+}
+
+
+main {
+    padding: 20px;
+}
+
+#video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: fff;
+}
+
+.video {
+    position: relative;
+    width: 30%;
+    margin-bottom: 20px;
+    transform: skew(0deg) rotate(0deg);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #000;
+}
+
+.video:hover {
+    transform: skew(0deg) rotate(0deg) scale(0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid #007bff;
+}
+
+.thumbnail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    transform: skew(0deg) rotate(0deg);
+    transition: transform 0.3s;
+    color: fff;
+}
+
+.video:hover .thumbnail {
+    transform: skew(0deg) rotate(0deg) scale(1.05);
+}
+
+.thumbnail img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: skew(0deg) rotate(0deg);
+}
+
+.video-info {
+    background-color: #fff;
+    padding: 14px;
+    transform: skew(0deg) rotate(0deg);
+    transition: transform 0.3s;
+    color: 000;
+}
+
+.video:hover .video-info {
+    transform: skew(0deg) rotate(0deg) scale(1.05);
+}
+
+.video-info h3 {
+    font-size: 16px;
+    margin: 0;
+    transform: skew(0deg) rotate(0deg);
+}
+
+.video-info p {
+    font-size: 14px;
+    margin: 0;
+    transform: skew(0deg) rotate(0deg);
+    color: #000;
+}
+
+input[type="text"],
+textarea {
+  background-color: #303030;
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.comment-input {
+  position: absolute;
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  z-index: 1;
+}
+
+textarea {
+  resize: none;
+}
+.video-controls {
+  position: absolute;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+#videoPlayer {
+  display: flex;
+  position: absolute;
+  width: 400px;
+  height: 800px;
+  z-index: 1;
+}
+
+.comment {
+  /* Gaya komentar Anda */
+  position: relative;
+}
+
+.comment-text {
+  background-color: #303030;
+  padding: 8px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
